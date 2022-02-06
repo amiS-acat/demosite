@@ -1,0 +1,47 @@
+@use "../setting/variables" as v;
+@use "../setting/mq" as mq;
+@use "../setting/mixin" as m;
+
+[data-js-on="true"] {
+  .slideshow01 {
+    height: 300px;
+  }
+
+  //function
+  .js-slideshow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    > div {
+      position: absolute;
+      display: none;
+      transform: translateX(210%);
+      transition: 1s;
+      >img {
+        width: 100%;
+      }
+      &.current {
+        display: block;
+        transform: translateX(0);
+      }
+      &.prev {
+        display: block;
+        transform: translateX(-110%);
+      }
+      &.prev-prev {
+        display: block;
+        transform: translateX(-210%);
+      }
+      &.next {
+        display: block;
+        transform: translateX(110%);
+      }
+      &.next-next {
+        display: block;
+        transform: translateX(210%);
+      }
+    }
+  }
+}

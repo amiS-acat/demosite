@@ -1,0 +1,26 @@
+@use "./setting/base";
+
+/* component */
+@use "./component/background";
+@use "./component/button";
+@use "./component/link";
+@use "./component/list";
+@use "./component/text";
+
+// /* module */
+@use "./module/card";
+@use "./module/modal";
+@use "./module/panel";
+@use "./module/slideshow";
+
+// /* common */
+@use "./common/footer"; 
+@use "./common/header";
+@use "./common/main";
+
+// /* unique */
+@use "./unique/notfound";
+
+// /* adjustment */
+@use "layout";
+@use "adjustment";

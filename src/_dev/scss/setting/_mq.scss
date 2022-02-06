@@ -1,0 +1,13 @@
+$breakpoint: 768px;
+
+@mixin mq($ex: max-width, $px: $breakpoint) {
+  @if $ex == "min" {
+    @media screen and (min-width: $px) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: $px) {
+      @content;
+    }
+  }
+}

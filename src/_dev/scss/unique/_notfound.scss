@@ -1,0 +1,27 @@
+@use "../setting/variables" as v;
+@use "../setting/mq" as mq;
+@use "../setting/mixin" as m;
+
+.notfound {
+  height: 100vh;
+}
+.notfound_inner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 18px);
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 51.4%;
+    width: 80%;
+    border-top: 1px solid #ccc;
+  }
+}
+.notfound_right {
+  margin-right: v.$spc-16;
+  margin-left: v.$spc-16;
+  color: #818181;
+}

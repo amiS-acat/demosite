@@ -1,0 +1,32 @@
+@use "../setting/variables" as v;
+@use "../setting/mq" as mq;
+@use "../setting/mixin" as m;
+
+/* main */
+.main {
+  padding-top: v.$spc-16;
+  padding-bottom: v.$spc-56;
+}
+.main_hdg02 {
+  padding-top: v.$spc-56;
+  padding-bottom: v.$spc-24;
+}
+.main_hdg03 {
+  padding-top: v.$spc-32;
+  padding-bottom: v.$spc-16;
+}
+
+/* FV */
+.FV {
+  background-color: #ccc;
+}
+.FV_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 544px;
+}
+.FV_hdg01 {
+  margin-bottom: v.$spc-8;
+}

@@ -1,0 +1,48 @@
+@use "./variables" as v;
+@use "./mq" as mq;
+
+@mixin no-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+@mixin hidden {
+  opacity: none;
+  visibility: hidden;
+}
+
+@mixin visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin overlay {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: v.$c-black-o;
+}
+
+@mixin hover01 {
+  opacity: 0.6;
+}
+@mixin hover02 {
+  transform: scale(1.02);
+}

@@ -1,0 +1,18 @@
+@use "../setting/variables" as v;
+@use "../setting/mq" as mq;
+@use "../setting/mixin" as m;
+
+*[class*="button01"] {
+  display: inline-block;
+  padding: v.$spc-8;
+}
+
+*[class*="button02"] {
+  display: inline-block;
+  padding: v.$spc-16;
+}
+
+*[class*="button03"] {
+  display: inline-block;
+  padding: v.$spc-24 v.$spc-16;
+}

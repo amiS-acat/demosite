@@ -1,0 +1,10 @@
+@use "../setting/variables" as v;
+@use "../setting/mq" as mq;
+@use "../setting/mixin" as m;
+
+.copyright {
+  background-color: v.$c-black;
+  color: v.$c-white;
+  font-size: v.$fs-12;
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+@use "../setting/variables" as v;
+@use "../setting/mq" as mq;
+@use "../setting/mixin" as m;
+
+*[class*="ul01"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > li {
+    margin: v.$spc-8;
+  }
+  @include mq.mq() {
+    &.block {
+      display: block;
+    }
+  }
+}
+
+*[class*="ul02"] {
+  display: block;
+}

@@ -1,0 +1,72 @@
+@use "./variables" as v;
+@use "./mq" as mq;
+@use "./mixin" as m;
+
+html,
+body {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+
+  @include mq.mq() {
+    font-size: 8.75px;
+  }
+}
+
+hr {
+  border-top: 1px solid #f3f3f3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+ol,
+ul,
+li,
+time {
+  margin: 0;
+  padding: 0;
+  color: v.$c-black;
+  font-size: v.$fs-16;
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  background: none;
+}
+
+*[class*="link"],
+a:not([class*="button"]) {
+  color: #2cc7eb;
+  &:hover {
+    color: #ff8e74;
+  }
+}
+
+a[class*="button"],
+button {
+  &:hover {
+    @include m.hover01;
+  }
+}

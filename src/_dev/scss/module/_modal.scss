@@ -1,0 +1,65 @@
+@use "../setting/variables" as v;
+@use "../setting/mq" as mq;
+@use "../setting/mixin" as m;
+
+button[class*="modal"] {
+  display: none;
+}
+.modal01_content01 {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: v.$spc-16 auto;
+  padding: v.$spc-32 v.$spc-16;
+  border-radius: 20px;
+  background-color: v.$c-white;
+}
+.modal01_close01 {
+  $_modalCloseBtn: 20px;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: $_modalCloseBtn;
+  height: $_modalCloseBtn;
+  span {
+    @include m.visually-hidden;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8.4px;
+    left: 0;
+    width: $_modalCloseBtn;
+    transition: 0.4s;
+    border-top: 3px solid #ccc;
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+}
+
+[data-js-on="true"] {
+  button[class*="modal"] {
+    display: inline-block;
+  }
+
+  //function
+  .js-modal-content {
+    display: none;
+    &.--open {
+      @include m.overlay;
+    }
+  }
+  .modal01_content01 {
+    display: none;
+    &.--open {
+      display: block;
+      position: absolute;
+      z-index: 800;
+    }
+  }
+}

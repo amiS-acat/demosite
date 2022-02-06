@@ -1,0 +1,28 @@
+@use "../setting/variables" as v;
+@use "../setting/mq" as mq;
+@use "../setting/mixin" as m;
+
+*[class*="hdg01"] {
+  font-size: v.$fs-24;
+}
+
+*[class*="hdg02"] {
+  font-size: v.$fs-20;
+}
+
+*[class*="hdg03"],
+*[class*="lead01"] {
+  font-size: v.$fs-18;
+}
+
+.hdg02-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: v.$spc-24;
+  margin-bottom: v.$spc-16;
+}
+
+*[class*="time"] {
+  color: #ccc;
+  font-size: v.$fs-14;
+}

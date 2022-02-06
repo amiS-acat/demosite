@@ -1,0 +1,21 @@
+@use "../setting/variables" as v;
+@use "../setting/mq" as mq;
+@use "../setting/mixin" as m;
+
+/* background-color */
+.bg-c01 {
+  background-color: v.$c-white;
+}
+.bg-c02 {
+  background-color: #ddd;
+}
+.bg-c03 {
+  background-color: #ccc;
+}
+/* background-image */
+.bg-image01 {
+  background-image: url(/images/bg-index-01.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

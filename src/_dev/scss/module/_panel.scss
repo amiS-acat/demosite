@@ -1,0 +1,13 @@
+@use "../setting/variables" as v;
+@use "../setting/mq" as mq;
+@use "../setting/mixin" as m;
+
+.panel01 {
+  box-shadow: 0 0 4px #ccc;
+  article {
+    padding: v.$spc-8;
+  }
+  &:hover {
+    @include m.hover02;
+  }
+}

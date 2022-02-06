@@ -1,0 +1,85 @@
+@use "./setting/variables" as v;
+@use "./setting/mixin" as m;
+@use "./setting/mq" as mq;
+
+/* color */
+.c01 {
+  color: v.$c-black;
+}
+.c02 {
+  color: #ccc;
+}
+.c03 {
+  color: #ddd;
+}
+
+/* width */
+.w-max {
+  margin-right: calc(50% + 0.8rem - 50vw);
+  margin-left: calc(50% + 0.8rem - 50vw);
+  @media screen and (max-width: v.$max-content) {
+    margin-right: -0.8rem;
+    margin-left: -0.8rem;
+  }
+}
+.w-20 {
+  width: 20%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-30 {
+  width: 30%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-60 {
+  width: 60%;
+}
+
+/* margin auto */
+.mt-16 {
+  margin-top: v.$spc-16;
+}
+.mt-24 {
+  margin-top: v.$spc-24;
+}
+.mt-32 {
+  margin-top: v.$spc-32;
+}
+.mt-56 {
+  margin-top: v.$spc-56;
+}
+.mt-64 {
+  margin-top: v.$spc-64;
+}
+.mb-8 {
+  margin-bottom: v.$spc-8;
+}
+
+/* margin auto */
+.mg-c {
+  margin-right: auto;
+  margin-left: auto;
+}
+.mg-r {
+  margin-left: auto;
+}
+.mg-l {
+  margin-right: auto;
+}
+
+/* text-align */
+.ta-c {
+  text-align: center;
+}
+.ta-r {
+  text-align: right;
+}
+.ta-l {
+  text-align: left;
+}
